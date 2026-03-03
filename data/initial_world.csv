@@ -1,4 +1,4 @@
 Country,Population,AvailableLand,Water,PotentialEnergyUsable,MetallicElements,Timber,MetallicAlloys,MetallicAlloysWaste,Housing,HousingWaste,Electronics,ElectronicsWaste
-Narnia,120,50,100,100,60,80,0,0,0,0,0,0
-Genovia,90,40,90,80,75,40,0,0,0,0,0,0
-Gilead,150,60,110,120,50,60,0,0,0,0,0,0
+Narnia,20,20,20,20,20,20,0,0,0,0,0,0
+Genovia,20,20,20,20,20,20,0,0,0,0,0,0
+Gilead,20,20,20,20,20,20,0,0,0,0,0,0

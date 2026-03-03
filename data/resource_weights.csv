@@ -1,10 +1,13 @@
 resource,weight
+AvailableLand,2
 Population,1.0
 MetallicElements,2.0
 Timber,1.5
-MetallicAlloys,3.0
-MetallicAlloysWaste,-1.5
+MetallicAlloys,4.0
+MetallicAlloysWaste,-2
 Housing,4.0
 HousingWaste,-2.0
 Electronics,5.0
-ElectronicsWaste,-2.5
+ElectronicsWaste,-3.5
+Military,12.0
+MilitaryWaste,-6.0
