@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 from typing import List, Union
-from ..DataTypes import Action, Heuristic, Node, Solution, State
+from DataTypes import Action, Heuristic, Node, Solution, State
 from .SearchStrategy import SearchStrategy
 
 class BreadthFirstSearch(SearchStrategy):

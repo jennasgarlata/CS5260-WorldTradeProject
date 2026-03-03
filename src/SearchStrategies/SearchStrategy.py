@@ -3,10 +3,10 @@
 
 from __future__ import annotations
 from typing import List, Union
-from ..DataTypes.Action import Action
-from ..DataTypes.Heuristic import Heuristic
-from ..DataTypes.Solution import Solution
-from ..DataTypes.State import State
+from DataTypes.Action import Action
+from DataTypes.Heuristic import Heuristic
+from DataTypes.Solution import Solution
+from DataTypes.State import State
 
 class SearchStrategy(object):
 

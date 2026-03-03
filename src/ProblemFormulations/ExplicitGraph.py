@@ -3,8 +3,8 @@
 
 from __future__ import annotations
 from typing import List, Optional
-from ..DataTypes import Action, State, Heuristic
-from .Problem import Problem
+from DataTypes import Action, State, Heuristic
+from Problem import Problem
 
 class ExplicitGraph(Problem):
 

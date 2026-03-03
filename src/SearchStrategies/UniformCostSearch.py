@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 from typing import List, Union
-from ..DataTypes import Action, Heuristic, Node, PriorityQueue, Solution, State
+from DataTypes import Action, Heuristic, Node, PriorityQueue, Solution, State
 from .SearchStrategy import SearchStrategy
 
 class UniformCostSearch(SearchStrategy):
@@ -22,7 +22,7 @@ class UniformCostSearch(SearchStrategy):
    def search_with_reached(self, initial_state: State, actions: List[Action], goals: List[State]) -> Solution:
       visited = []
       node = Node(initial_state, None, None, 0.0)
-      frontier = PriorityQueue(lambda node: node.PATH_COST, True).add(node)
+      frontier = PriorityQueue(lambda node: node.PATH_COST, False).add(node)
       reached = { node.STATE: node }
       while not frontier.is_empty():
          node = frontier.pop()
@@ -38,7 +38,7 @@ class UniformCostSearch(SearchStrategy):
    def search_without_reached(self, initial_state: State, actions: List[Action], goals: List[State]) -> Solution:
       visited = []
       node = Node(initial_state, None, None, 0.0)
-      frontier = PriorityQueue(lambda node: node.PATH_COST, True).add(node)
+      frontier = PriorityQueue(lambda node: node.PATH_COST, False).add(node)
       while not frontier.is_empty():
          node = frontier.pop()
          visited.append(node.STATE)

@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 from typing import List, Union
-from ..DataTypes import Action, Heuristic, Node, PriorityQueue, Solution, State
+from DataTypes import Action, Heuristic, Node, PriorityQueue, Solution, State
 from .SearchStrategy import SearchStrategy
 
 class HeuristicDepthFirstSearch(SearchStrategy):
@@ -12,7 +12,7 @@ class HeuristicDepthFirstSearch(SearchStrategy):
       super().__init__(tree_based_search)
 
    def _expand(self, actions: List[Action], heuristic: Heuristic, node: Node) -> List[Node]:
-      nodes = PriorityQueue(lambda node: heuristic.apply(node.STATE), False)
+      nodes = PriorityQueue(lambda node: heuristic.apply(node.STATE), False) ##maybe flip to true
       for action in actions:
          next_state = action.apply(node.STATE)
          if next_state is not None:

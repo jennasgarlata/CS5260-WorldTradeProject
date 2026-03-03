@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 from typing import List, Union
-from ..DataTypes import Action, Heuristic, Node, PriorityQueue, Solution, State
+from DataTypes import Action, Heuristic, Node, PriorityQueue, Solution, State
 from .SearchStrategy import SearchStrategy
 
 class GenericHeuristicSearch(SearchStrategy):
@@ -22,7 +22,7 @@ class GenericHeuristicSearch(SearchStrategy):
    def search_with_reached(self, initial_state: State, actions: List[Action], heuristic: Union[Heuristic, None], goals: List[State]) -> Solution:
       visited = []
       node = Node(initial_state, None, None, 0.0)
-      frontier = PriorityQueue(lambda node: heuristic.apply(node.STATE), True).add(node)
+      frontier = PriorityQueue(lambda node: heuristic.apply(node.STATE), False).add(node)
       reached = { node.STATE: node }
       while not frontier.is_empty():
          node = frontier.pop()
@@ -38,7 +38,7 @@ class GenericHeuristicSearch(SearchStrategy):
    def search_without_reached(self, initial_state: State, actions: List[Action], heuristic: Union[Heuristic, None], goals: List[State]) -> Solution:
       visited = []
       node = Node(initial_state, None, None, 0.0)
-      frontier = PriorityQueue(lambda node: heuristic.apply(node.STATE), True).add(node)
+      frontier = PriorityQueue(lambda node: heuristic.apply(node.STATE), False).add(node)
       while not frontier.is_empty():
          node = frontier.pop()
          visited.append(node.STATE)
