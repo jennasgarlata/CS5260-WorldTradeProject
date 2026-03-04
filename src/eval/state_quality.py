@@ -8,7 +8,7 @@ RESOURCE_WEIGHTS: Dict[str, float] = {}
 HEGEMONY_WEIGHT = 500.0
 
 # Extra bonus to encourage holding military-transform ingredients (even if CSV weight is 0)
-MIL_READINESS_WEIGHT = 40.0  # tune: 40–200
+MIL_READINESS_WEIGHT = 20.0 
 
 EPS = 1e-9
 

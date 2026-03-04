@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from eval.params import GAMMA
 from dataclasses import dataclass
 from typing import Callable, Iterable, Optional, Tuple, Any
 import copy
@@ -29,7 +30,7 @@ def _validate_gamma(gamma: float) -> None:
 
 
 def _discount_factor(gamma: float, n_steps: int) -> float:
-    _validate_gamma(gamma)
+    _validate_gamma(GAMMA)
     if n_steps < 0:
         raise ValueError(f"n_steps must be >= 0, got {n_steps}")
     # gamma^N
@@ -44,7 +45,7 @@ def undiscounted_reward(
     state_quality_fn: StateQualityFn,
 ) -> float:
     """
-    R(ci, sj) = Qend(ci, sj) - Qstart(ci, sj). :contentReference[oaicite:3]{index=3}
+    R(ci, sj) = Qend(ci, sj) - Qstart(ci, sj).
     """
     q_start = float(state_quality_fn(start_world, country))
     q_end = float(state_quality_fn(end_world, country))
@@ -57,12 +58,11 @@ def discounted_reward(
     start_world: WorldT,
     end_world: WorldT,
     n_steps: int,
-    gamma: float,
     state_quality_fn: StateQualityFn,
 ) -> float:
     """
-    DR(ci, sj) = gamma^N * (Qend - Qstart), 0 <= gamma < 1. :contentReference[oaicite:4]{index=4}
-    Reward is assumed to come from the final state only. :contentReference[oaicite:5]{index=5}
+    DR(ci, sj) = gamma^N * (Qend - Qstart), 0 <= gamma < 1.
+    Reward is assumed to come from the final state only.
     """
     r = undiscounted_reward(
         country=country,
@@ -70,7 +70,7 @@ def discounted_reward(
         end_world=end_world,
         state_quality_fn=state_quality_fn,
     )
-    return _discount_factor(gamma, n_steps) * r
+    return _discount_factor(GAMMA, n_steps) * r
 
 
 def simulate_schedule(
@@ -102,15 +102,14 @@ def rewards_from_schedule(
     schedule: Iterable[OperationT],
     state_quality_fn: StateQualityFn,
     apply_op_fn: ApplyOpFn,
-    gamma: float = 0.9,
     copy_world: bool = True,
 ) -> Tuple[Optional[RewardResult], Optional[WorldT]]:
     """
     Simulate schedule, then compute both R and DR.
 
-    We interpret N as the number of operators in the schedule (time steps). :contentReference[oaicite:6]{index=6}
+    We interpret N as the number of operators in the schedule (time steps).
     """
-    _validate_gamma(gamma)
+    _validate_gamma(GAMMA)
     schedule_list = list(schedule)
     n_steps = len(schedule_list)
 
@@ -126,7 +125,7 @@ def rewards_from_schedule(
     q_start = float(state_quality_fn(start_world, country))
     q_end = float(state_quality_fn(end_world, country))
     r = q_end - q_start
-    dr = _discount_factor(gamma, n_steps) * r
+    dr = _discount_factor(GAMMA, n_steps) * r
 
     return (
         RewardResult(
@@ -135,7 +134,7 @@ def rewards_from_schedule(
             q_end=q_end,
             reward=r,
             discounted_reward=dr,
-            gamma=float(gamma),
+            gamma=float(GAMMA),
             n_steps=n_steps,
         ),
         end_world,

@@ -11,22 +11,26 @@ from eval.state_quality import set_resource_weights
 from models.transform import TransformOperation
 from models.transfer import TransferOperation
 from models.transfer_action import TransferAction
+import random
 
-
-def build_transfer_actions(world, self_country: str, max_depth: int, amount_cap: int = 1):
+def build_transfer_actions(world, self_country: str, max_depth: int, amount_cap: int = 5):
     actions = []
 
     countries = list(world.countries.keys())
-    base_amounts = sorted({1, amount_cap})  # avoids duplicate [1,1]
+
+    # shuffle to avoid always picking the first country in deterministic insertion order
+    random.shuffle(countries)
+
+    base_amounts = list(range(amount_cap, 0, -1))
 
     # Explicitly forbidden structural / demographic resources
-    FORBIDDEN_RESOURCES = {"Population", "Housing", "AvailableLand"}
+    FORBIDDEN_RESOURCES = {"Population", "Housing", "AvailableLand", "Water", "PotentialEnergyUsable"}
 
     for sender in countries:
-        for receiver in countries:
-            if sender == receiver:
-                continue
+        # shuffle receiver order (independent from sender order)
+        receivers = [c for c in countries if c != sender]
 
+        for receiver in receivers:
             # Only allow transfers involving self_country
             if self_country not in (sender, receiver):
                 continue
@@ -40,8 +44,7 @@ def build_transfer_actions(world, self_country: str, max_depth: int, amount_cap:
                     continue
                 if r in FORBIDDEN_RESOURCES:
                     continue
-                if r.endswith("Waste"):   # block ALL waste transfers
-                    continue
+                
                 resources.append(r)
 
             for res in resources:
@@ -56,9 +59,10 @@ def build_transfer_actions(world, self_country: str, max_depth: int, amount_cap:
                         )
                         actions.append(TransferAction(op, max_depth))
 
+    random.shuffle(actions)
     return actions
 
-def build_actions(world, templates, self_country: str, max_depth: int, multiplier_cap: int = 10):
+def build_actions(world, templates, self_country: str, max_depth: int, multiplier_cap: int = 5):
     """
     Build transform actions for the self_country only.
     """
@@ -130,13 +134,12 @@ def main():
     # Agent/search settings
     # ----------------------------
     self_country = "Narnia"
-    max_depth = 7
+    max_depth = 6
 
     from eval.state_quality import Q
     for country_name in world.countries.keys():
         print(f"Q({country_name}) initial: {Q(country_name, world)}")
 
-    # IMPORTANT: use tree-based search (ScheduleState contains WorldState which is not hashable)
     search = GreedyBestFirstSearch(tree_based_search=True)
 
     start = ScheduleState(world=world, schedule=tuple(), depth=0)
@@ -146,11 +149,10 @@ def main():
         templates=templates,
         self_country=self_country,
         max_depth=max_depth,
-        multiplier_cap=10,
+        multiplier_cap=5,
     )
 
-    transfer_actions = build_transfer_actions(world=world, self_country=self_country, max_depth=max_depth, amount_cap=1)
-
+    transfer_actions = build_transfer_actions(world=world, self_country=self_country, max_depth=max_depth, amount_cap=5)
     actions = transform_actions + transfer_actions
     heuristic = EUHeuristic(self_country=self_country, initial_world=world, templates=templates)
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from eval.params import GAMMA, LOGISTIC_K, LOGISTIC_X0
 from typing import Callable, Iterable, Any, Dict
 import math
 
@@ -12,8 +13,8 @@ from eval.reward import discounted_reward
 def logistic_probability(
     x: float,
     L: float = 1.0,
-    k: float = 1.0,
-    x0: float = 0.0,
+    k: float = LOGISTIC_K,
+    x0: float = LOGISTIC_X0,
 ) -> float:
     """
     Logistic function:
@@ -32,10 +33,9 @@ def country_accept_probability(
     start_world: WorldT,
     end_world: WorldT,
     n_steps: int,
-    gamma: float,
     state_quality_fn: Callable,
-    k: float = 1.0,
-    x0: float = 0.0,
+    k: float = LOGISTIC_K,
+    x0: float = LOGISTIC_X0,
 ) -> float:
     """
     Computes P(ci, sj)
@@ -49,7 +49,6 @@ def country_accept_probability(
         start_world=start_world,
         end_world=end_world,
         n_steps=n_steps,
-        gamma=gamma,
         state_quality_fn=state_quality_fn,
     )
 
@@ -62,10 +61,9 @@ def schedule_success_probability(
     start_world: WorldT,
     end_world: WorldT,
     n_steps: int,
-    gamma: float,
     state_quality_fn: Callable,
-    k: float = 1.0,
-    x0: float = 0.0,
+    k: float = LOGISTIC_K,
+    x0: float = LOGISTIC_X0,
 ) -> float:
     """
     P(sj) = product of P(ci, sj)
@@ -79,7 +77,6 @@ def schedule_success_probability(
             start_world=start_world,
             end_world=end_world,
             n_steps=n_steps,
-            gamma=gamma,
             state_quality_fn=state_quality_fn,
             k=k,
             x0=x0,

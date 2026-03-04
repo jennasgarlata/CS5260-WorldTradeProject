@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from eval.params import GAMMA, LOGISTIC_K, LOGISTIC_X0, FAILURE_COST
 from dataclasses import dataclass
 from typing import Callable, Iterable, Optional, Any, Dict, List, Set, Tuple
 
@@ -39,20 +40,16 @@ def expected_utility_of_schedule(
     participating_countries: Iterable[str],
     state_quality_fn: StateQualityFn,
     apply_op_fn: ApplyOpFn,
-    gamma: float = 0.9,
     # logistic parameters (start points per spec)
-    k: float = 1.0,
-    x0: float = 0.0,
     # cost of failure C (negative constant per spec)
-    failure_cost: float = -1.0,
     copy_world: bool = True,
 ) -> Tuple[Optional[ExpectedUtilityResult], Optional[WorldT]]:
     """
-    EU(self, sj) = (P(sj) * DR(self, sj)) + ((1 - P(sj)) * C) :contentReference[oaicite:4]{index=4}
+    EU(self, sj) = (P(sj) * DR(self, sj)) + ((1 - P(sj)) * C)
 
-    - P(sj) is product of individual acceptance probabilities :contentReference[oaicite:5]{index=5}
-    - Each acceptance probability uses logistic with x = DR(ci, sj) :contentReference[oaicite:6]{index=6}
-    - C is a negative constant (you choose/justify) :contentReference[oaicite:7]{index=7}
+    - P(sj) is product of individual acceptance probabilities
+    - Each acceptance probability uses logistic with x = DR(ci, sj)
+    - C is a negative constant (you choose/justify)
 
     Returns (result, end_world) or (None, None) if schedule is illegal (simulation fails).
     """
@@ -77,7 +74,6 @@ def expected_utility_of_schedule(
         start_world=start_world,
         end_world=end_world,
         n_steps=n_steps,
-        gamma=gamma,
         state_quality_fn=state_quality_fn,
     )
 
@@ -87,23 +83,20 @@ def expected_utility_of_schedule(
         start_world=start_world,
         end_world=end_world,
         n_steps=n_steps,
-        gamma=gamma,
         state_quality_fn=state_quality_fn,
-        k=k,
-        x0=x0,
     )
 
     # 4) expected utility
-    eu = (p_sj * dr_self) + ((1.0 - p_sj) * float(failure_cost))
+    eu = (p_sj * dr_self) + ((1.0 - p_sj) * float(FAILURE_COST))
 
     return (
         ExpectedUtilityResult(
             self_country=self_country,
             n_steps=n_steps,
-            gamma=float(gamma),
+            gamma=float(GAMMA),
             p_schedule=float(p_sj),
             discounted_reward_self=float(dr_self),
-            failure_cost=float(failure_cost),
+            failure_cost=float(FAILURE_COST),
             expected_utility=float(eu),
         ),
         end_world,
