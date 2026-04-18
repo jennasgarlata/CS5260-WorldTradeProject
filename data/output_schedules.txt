@@ -1,0 +1,29 @@
+Schedule 1 | Final EU: 14.999037
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+]
+
+Schedule 2 | Final EU: 9.940733
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='Irrigation', multiplier=2) EU: 9.940733
+]
+
+Schedule 3 | Final EU: 7.869572
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Arendelle', resource='Timber', amount=4) EU: 7.869572
+]
+
+Schedule 4 | Final EU: 6.806411
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=5) EU: 6.806411
+]
+
+Schedule 5 | Final EU: 5.536103
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Arendelle', resource='MetallicElements', amount=2) EU: 5.536103
+]
+

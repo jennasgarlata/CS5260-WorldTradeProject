@@ -1,0 +1,116 @@
+Schedule 1 | Final EU: 14.999037
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+]
+
+Schedule 2 | Final EU: 9.940733
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='Irrigation', multiplier=2) EU: 9.940733
+]
+
+Schedule 3 | Final EU: 7.869572
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Arendelle', resource='Timber', amount=4) EU: 7.869572
+]
+
+Schedule 4 | Final EU: 6.806411
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=5) EU: 6.806411
+]
+
+Schedule 5 | Final EU: 5.536103
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Arendelle', resource='MetallicElements', amount=2) EU: 5.536103
+]
+
+Schedule 6 | Final EU: -1.972664
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Genovia', receiver='Narnia', resource='MetallicElements', amount=1) EU: -1.972664
+]
+
+Schedule 7 | Final EU: -2.096162
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Arendelle', receiver='Narnia', resource='Timber', amount=4) EU: -2.096162
+]
+
+Schedule 8 | Final EU: -2.096481
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Arendelle', receiver='Narnia', resource='MetallicElements', amount=2) EU: -2.096481
+]
+
+Schedule 9 | Final EU: -2.099499
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Westeros', receiver='Narnia', resource='MetallicElements', amount=3) EU: -2.099499
+]
+
+Schedule 10 | Final EU: -2.099986
+[
+TransferOperation(sender='Arendelle', receiver='Narnia', resource='MetallicElements', amount=3) EU: -2.099986
+]
+
+Schedule 11 | Final EU: -2.098790
+[
+TransferOperation(sender='Arendelle', receiver='Narnia', resource='MetallicElements', amount=3) EU: -2.099986
+TransferOperation(sender='Narnia', receiver='Arendelle', resource='MetallicElements', amount=1) EU: -2.098790
+]
+
+Schedule 12 | Final EU: -2.099856
+[
+TransferOperation(sender='Arendelle', receiver='Narnia', resource='MetallicElements', amount=3) EU: -2.099986
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: -2.099856
+]
+
+Schedule 13 | Final EU: -2.099959
+[
+TransferOperation(sender='Arendelle', receiver='Narnia', resource='MetallicElements', amount=3) EU: -2.099986
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=2) EU: -2.099959
+]
+
+Schedule 14 | Final EU: -2.099997
+[
+TransferOperation(sender='Westeros', receiver='Narnia', resource='MetallicElements', amount=4) EU: -2.099997
+]
+
+Schedule 15 | Final EU: -2.099990
+[
+TransferOperation(sender='Westeros', receiver='Narnia', resource='MetallicElements', amount=4) EU: -2.099997
+TransferOperation(sender='Narnia', receiver='Gilead', resource='Timber', amount=3) EU: -2.099990
+]
+
+Schedule 16 | Final EU: -2.099993
+[
+TransferOperation(sender='Westeros', receiver='Narnia', resource='MetallicElements', amount=4) EU: -2.099997
+TransferOperation(sender='Narnia', receiver='Genovia', resource='Timber', amount=5) EU: -2.099993
+]
+
+Schedule 17 | Final EU: -2.099999
+[
+TransferOperation(sender='Arendelle', receiver='Narnia', resource='MetallicElements', amount=3) EU: -2.099986
+TransferOperation(sender='Narnia', receiver='Westeros', resource='MetallicElements', amount=3) EU: -2.099999
+]
+
+Schedule 18 | Final EU: -2.100000
+[
+TransferOperation(sender='Westeros', receiver='Narnia', resource='Timber', amount=5) EU: -2.100000
+]
+
+Schedule 19 | Final EU: -2.099999
+[
+TransferOperation(sender='Westeros', receiver='Narnia', resource='Timber', amount=5) EU: -2.100000
+TransferOperation(sender='Narnia', receiver='Arendelle', resource='Timber', amount=3) EU: -2.099999
+]
+
+Schedule 20 | Final EU: -2.100000
+[
+TransferOperation(sender='Westeros', receiver='Narnia', resource='Timber', amount=5) EU: -2.100000
+TransferOperation(sender='Narnia', receiver='Gilead', resource='Timber', amount=1) EU: -2.100000
+]
+
