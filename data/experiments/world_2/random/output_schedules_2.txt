@@ -1,0 +1,69 @@
+Schedule 1 | Final EU: 19.382269
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+]
+
+Schedule 2 | Final EU: 15.189552
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 15.189552
+]
+
+Schedule 3 | Final EU: 13.710351
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='Desalination', multiplier=2) EU: 13.710351
+]
+
+Schedule 4 | Final EU: 13.710351
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='Food', multiplier=2) EU: 13.710351
+]
+
+Schedule 5 | Final EU: 14.987535
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='Food', multiplier=2) EU: 13.710351
+TransformOperation(country='Narnia', template_name='Electronics', multiplier=1) EU: 14.987535
+]
+
+Schedule 6 | Final EU: 17.610715
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='Food', multiplier=2) EU: 13.710351
+TransformOperation(country='Narnia', template_name='Electronics', multiplier=1) EU: 14.987535
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=1) EU: 17.610715
+]
+
+Schedule 7 | Final EU: 14.204361
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='Food', multiplier=2) EU: 13.710351
+TransformOperation(country='Narnia', template_name='Electronics', multiplier=1) EU: 14.987535
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=1) EU: 17.610715
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 14.204361
+]
+
+Schedule 8 | Final EU: 12.452658
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='Food', multiplier=2) EU: 13.710351
+TransformOperation(country='Narnia', template_name='Electronics', multiplier=1) EU: 14.987535
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=1) EU: 17.610715
+TransformOperation(country='Narnia', template_name='NonrenewableEnergy', multiplier=1) EU: 12.452658
+]
+
+Schedule 9 | Final EU: 12.435544
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='NonrenewableEnergy', multiplier=1) EU: 12.435544
+]
+
+Schedule 10 | Final EU: 13.891202
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 19.382269
+TransformOperation(country='Narnia', template_name='NonrenewableEnergy', multiplier=1) EU: 12.435544
+TransformOperation(country='Narnia', template_name='Electronics', multiplier=1) EU: 13.891202
+]
+

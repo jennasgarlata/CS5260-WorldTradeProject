@@ -1,0 +1,6 @@
+Country,Population,AvailableLand,Water,PotentialEnergyUsable,MetallicElements,Timber,MetallicAlloys,MetallicAlloysWaste,Housing,HousingWaste,Electronics,ElectronicsWaste
+Narnia,11,20,11,15,21,12,0,0,0,0,0,0
+Genovia,27,27,38,25,46,18,0,0,0,0,0,0
+Arendelle,50,48,42,11,47,47,0,0,0,0,0,0
+Gilead,11,33,32,0,15,26,0,0,0,0,0,0
+Westeros,11,14,50,34,17,25,0,0,0,0,0,0

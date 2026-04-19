@@ -58,5 +58,5 @@ def batch_parse_schedules(folder_path):
 if __name__ == "__main__":
     # Change this to your folder path
     print(os.getcwd())
-    batch_parse_schedules("data/experiments/world_1")
-    batch_parse_schedules("data/experiments/world_2")
+    batch_parse_schedules("data/experiments/world_1/random")
+    batch_parse_schedules("data/experiments/world_2/random")

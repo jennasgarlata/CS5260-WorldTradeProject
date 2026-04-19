@@ -49,20 +49,20 @@ def run_pruning_experiment(keep_p):
         random_seed=42,
     )
 
-def run_standard():
+def run_standard(itr):
     start = time.time()
     result = country_scheduler(
         your_country_name="Narnia",
         resources_filename="data/resource_weights.csv",
         initial_state_filename="data/initial_world.csv",
-        output_schedule_filename=f"data/output_schedules.txt",
-        num_output_schedules=50,
-        depth_bound=40, 
-        frontier_max_size=5000,
+        output_schedule_filename=f"data/output_schedules_{itr}.txt",
+        num_output_schedules=10,
+        depth_bound=8, 
+        frontier_max_size=100,
         templates_dir="data/templates/transforms",
         multiplier_cap=5,
         transfer_amount_cap=5,
-        successor_keep_probability=.25,
+        successor_keep_probability=.5,
         random_seed=None,
     )
     end = time.time()
@@ -100,7 +100,8 @@ def run_experiments():
     print("\nPruning experiments finished")
 
 def main():
-    run_standard()
+    for i in [1,2,3,4,5]:
+      run_standard(i)
 
 
 

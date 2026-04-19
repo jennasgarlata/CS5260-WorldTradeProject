@@ -1,0 +1,136 @@
+Schedule 1 | Final EU: 14.999037
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+]
+
+Schedule 2 | Final EU: 12.937541
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 12.937541
+]
+
+Schedule 3 | Final EU: 11.419967
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 11.419967
+]
+
+Schedule 4 | Final EU: 9.647028
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 12.937541
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 9.647028
+]
+
+Schedule 5 | Final EU: 9.647028
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 12.937541
+TransformOperation(country='Narnia', template_name='desalination', multiplier=1) EU: 9.647028
+]
+
+Schedule 6 | Final EU: 9.155513
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=3) EU: 9.155513
+]
+
+Schedule 7 | Final EU: 8.548791
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 11.419967
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 8.548791
+]
+
+Schedule 8 | Final EU: 8.548791
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 11.419967
+TransformOperation(country='Narnia', template_name='desalination', multiplier=1) EU: 8.548791
+]
+
+Schedule 9 | Final EU: 8.461263
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='Food', multiplier=3) EU: 8.461263
+]
+
+Schedule 10 | Final EU: 8.461263
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='desalination', multiplier=3) EU: 8.461263
+]
+
+Schedule 11 | Final EU: 7.438336
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=3) EU: 9.155513
+TransferOperation(sender='Westeros', receiver='Narnia', resource='MetallicElements', amount=1) EU: 7.438336
+]
+
+Schedule 12 | Final EU: 7.179285
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=3) EU: 9.155513
+TransferOperation(sender='Westeros', receiver='Narnia', resource='MetallicElements', amount=1) EU: 7.438336
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=2) EU: 7.179285
+]
+
+Schedule 13 | Final EU: 7.022084
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 12.937541
+TransformOperation(country='Narnia', template_name='desalination', multiplier=1) EU: 9.647028
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 7.022084
+]
+
+Schedule 14 | Final EU: 6.883270
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=3) EU: 9.155513
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=1) EU: 6.883270
+]
+
+Schedule 15 | Final EU: 6.251539
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 11.419967
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 8.548791
+TransformOperation(country='Narnia', template_name='desalination', multiplier=1) EU: 6.251539
+]
+
+Schedule 16 | Final EU: 5.995429
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='Food', multiplier=3) EU: 8.461263
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 5.995429
+]
+
+Schedule 17 | Final EU: 5.995429
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransformOperation(country='Narnia', template_name='desalination', multiplier=3) EU: 8.461263
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 5.995429
+]
+
+Schedule 18 | Final EU: 5.519746
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=3) EU: 9.155513
+TransferOperation(sender='Westeros', receiver='Narnia', resource='MetallicElements', amount=1) EU: 7.438336
+TransferOperation(sender='Narnia', receiver='Westeros', resource='Timber', amount=2) EU: 7.179285
+TransferOperation(sender='Westeros', receiver='Narnia', resource='Timber', amount=1) EU: 5.519746
+]
+
+Schedule 19 | Final EU: 4.907137
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=3) EU: 12.937541
+TransformOperation(country='Narnia', template_name='desalination', multiplier=1) EU: 9.647028
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 7.022084
+TransformOperation(country='Narnia', template_name='Food', multiplier=1) EU: 4.907137
+]
+
+Schedule 20 | Final EU: 4.877226
+[
+TransformOperation(country='Narnia', template_name='Alloys', multiplier=2) EU: 14.999037
+TransferOperation(sender='Narnia', receiver='Gilead', resource='Timber', amount=3) EU: 8.681597
+TransferOperation(sender='Narnia', receiver='Gilead', resource='Timber', amount=1) EU: 6.689325
+TransferOperation(sender='Narnia', receiver='Gilead', resource='Timber', amount=1) EU: 4.877226
+]
+

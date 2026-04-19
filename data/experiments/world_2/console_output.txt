@@ -1,0 +1,264 @@
+
+Running depth experiments...
+
+Running experiment for depth=2
+
+
+--- Scheduler Stats ---
+Depth bound: 2
+States expanded: 360
+Schedules generated: 1553
+Schedules kept after pruning: 758
+Complete schedules found: 344
+Candidate schedules recorded: 359
+-----------------------
+
+Elapsed time: 0.0798 seconds
+
+Running experiment for depth=4
+
+
+--- Scheduler Stats ---
+Depth bound: 4
+States expanded: 425
+Schedules generated: 18120
+Schedules kept after pruning: 9009
+Complete schedules found: 272
+Candidate schedules recorded: 424
+-----------------------
+
+Elapsed time: 0.9003 seconds
+
+Running experiment for depth=6
+
+
+--- Scheduler Stats ---
+Depth bound: 6
+States expanded: 841
+Schedules generated: 45135
+Schedules kept after pruning: 22635
+Complete schedules found: 468
+Candidate schedules recorded: 840
+-----------------------
+
+Elapsed time: 2.3393 seconds
+
+Running experiment for depth=8
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 1067
+Schedules generated: 75652
+Schedules kept after pruning: 37817
+Complete schedules found: 451
+Candidate schedules recorded: 1066
+-----------------------
+
+Elapsed time: 4.1343 seconds
+
+Running experiment for depth=10
+
+
+--- Scheduler Stats ---
+Depth bound: 10
+States expanded: 1193
+Schedules generated: 98221
+Schedules kept after pruning: 49044
+Complete schedules found: 396
+Candidate schedules recorded: 1192
+-----------------------
+
+Elapsed time: 5.5863 seconds
+
+Running experiment for depth=12
+
+
+--- Scheduler Stats ---
+Depth bound: 12
+States expanded: 1149
+Schedules generated: 122498
+Schedules kept after pruning: 61328
+Complete schedules found: 157
+Candidate schedules recorded: 1148
+-----------------------
+
+Elapsed time: 7.1212 seconds
+
+Depth experiments finished
+
+Running beam experiments...
+
+Running experiment for beam=5
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 39
+Schedules generated: 3584
+Schedules kept after pruning: 1765
+Complete schedules found: 11
+Candidate schedules recorded: 38
+-----------------------
+
+Elapsed time: 0.1838 seconds
+
+Running experiment for beam=10
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 85
+Schedules generated: 8587
+Schedules kept after pruning: 4266
+Complete schedules found: 20
+Candidate schedules recorded: 84
+-----------------------
+
+Elapsed time: 0.4368 seconds
+
+Running experiment for beam=25
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 197
+Schedules generated: 21250
+Schedules kept after pruning: 10563
+Complete schedules found: 28
+Candidate schedules recorded: 196
+-----------------------
+
+Elapsed time: 1.1144 seconds
+
+Running experiment for beam=50
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 463
+Schedules generated: 42449
+Schedules kept after pruning: 21291
+Complete schedules found: 117
+Candidate schedules recorded: 462
+-----------------------
+
+Elapsed time: 2.3636 seconds
+
+Running experiment for beam=100
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 1067
+Schedules generated: 75652
+Schedules kept after pruning: 37817
+Complete schedules found: 451
+Candidate schedules recorded: 1066
+-----------------------
+
+Elapsed time: 4.1150 seconds
+
+Running experiment for beam=250
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 2812
+Schedules generated: 197461
+Schedules kept after pruning: 98573
+Complete schedules found: 1202
+Candidate schedules recorded: 2811
+-----------------------
+
+Elapsed time: 11.0257 seconds
+
+Beam experiments finished
+
+Running pruning experiments...
+
+Running experiment for successor_keep_probability=0.05
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 1193
+Schedules generated: 42111
+Schedules kept after pruning: 2110
+Complete schedules found: 852
+Candidate schedules recorded: 1192
+-----------------------
+
+Elapsed time: 0.4723 seconds
+
+Running experiment for successor_keep_probability=0.1
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 835
+Schedules generated: 50218
+Schedules kept after pruning: 5013
+Complete schedules found: 431
+Candidate schedules recorded: 834
+-----------------------
+
+Elapsed time: 0.7994 seconds
+
+Running experiment for successor_keep_probability=0.25
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 902
+Schedules generated: 53483
+Schedules kept after pruning: 13352
+Complete schedules found: 461
+Candidate schedules recorded: 901
+-----------------------
+
+Elapsed time: 1.6454 seconds
+
+Running experiment for successor_keep_probability=0.5
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 1067
+Schedules generated: 75652
+Schedules kept after pruning: 37817
+Complete schedules found: 451
+Candidate schedules recorded: 1066
+-----------------------
+
+Elapsed time: 4.2491 seconds
+
+Running experiment for successor_keep_probability=0.75
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 747
+Schedules generated: 75453
+Schedules kept after pruning: 56511
+Complete schedules found: 173
+Candidate schedules recorded: 746
+-----------------------
+
+Elapsed time: 6.0865 seconds
+
+Running experiment for successor_keep_probability=1
+
+
+--- Scheduler Stats ---
+Depth bound: 8
+States expanded: 634
+Schedules generated: 65427
+Schedules kept after pruning: 65427
+Complete schedules found: 130
+Candidate schedules recorded: 633
+-----------------------
+
+Elapsed time: 6.6829 seconds
+
+Pruning experiments finished
