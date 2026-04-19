@@ -28,4 +28,4 @@ if __name__ == "__main__":
     input_file = "data/initial_world.csv"
     output_file = "data/randomized_world.csv"
 
-    generate_random_world(input_file, output_file, seed=42)
+    generate_random_world(input_file, output_file)

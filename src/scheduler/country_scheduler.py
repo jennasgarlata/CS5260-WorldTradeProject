@@ -78,7 +78,7 @@ def country_scheduler(
     multiplier_cap=5,
     transfer_amount_cap=5,
     successor_keep_probability=0.7,
-    random_seed=42,
+    random_seed=None,
 ):
     initial_world = load_world_state(initial_state_filename)
     weights = load_resource_weights(resources_filename)
